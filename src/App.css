@@ -1,0 +1,9 @@
+/* Seacrh */
+.search-input {
+  outline: none;
+  background: transparent;
+}
+
+.wrap-items {
+  width: fit-content;
+}
