@@ -127,8 +127,8 @@ function App() {
             description={""}
           />
           <Forecast
-            temp_min={weatherData.temp_min}
-            temp_max={weatherData.temp_max}
+            temp_min={Number(weatherData.temp_min.toFixed(0))}
+            temp_max={Number(weatherData.temp_max.toFixed(0))}
             description={weatherData.description}
           />
         </div>
