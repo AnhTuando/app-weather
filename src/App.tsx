@@ -78,7 +78,7 @@ function App() {
         const apiData: WeatherData = {
           name: response.data.name,
 
-          temp: response.data.main.temp,
+          temp: response.data.main.temp - 273.15,
           visibility: response.data.visibility,
           sunrise: `${new Date(
             response.data.sys.sunrise * 1000
@@ -94,8 +94,8 @@ function App() {
           humidity: response.data.main.humidity,
           wind_speed: response.data.wind.speed,
           clouds: response.data.clouds.all,
-          temp_min: response.data.main.temp_min,
-          temp_max: response.data.main.temp_max,
+          temp_min: response.data.main.temp_min - 273.15,
+          temp_max: response.data.main.temp_max - 273.15,
           description: response.data.weather[0].description,
         };
         setWeatherData(apiData);
